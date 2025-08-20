@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>CYNK – Climate Tech Platform</title>
+    <style>
+      /* Marquee effect */
+      @keyframes scrollText {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .marquee {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scrollText 20s linear infinite;
+      }
+    </style>
+    <script>
+      // Smooth scroll to bottom
+      function scrollToBottom() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth"
+        });
+      }
+
+      // Change header background & text on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("site-header");
+        const navLinks = document.querySelectorAll("#site-header nav a");
+        if (window.scrollY > 50) {
+          header.classList.add("bg-white", "shadow-lg");
+          header.classList.remove("bg-transparent");
+          header.classList.add("text-gray-800");
+          header.classList.remove("text-white");
+          navLinks.forEach(link => link.classList.add("text-gray-800"));
+          navLinks.forEach(link => link.classList.remove("text-white"));
+        } else {
+          header.classList.add("bg-transparent", "text-white");
+          header.classList.remove("bg-white", "shadow-lg", "text-gray-800");
+          navLinks.forEach(link => link.classList.add("text-white"));
+          navLinks.forEach(link => link.classList.remove("text-gray-800"));
+        }
+      });
+    </script>
+  </head>
+  <!-- <body class="text-gray-800 bg-cover" style="background-image: url('https://placehold.co/900x600');"> -->
+  <body class="text-gray-800 bg-cover" style="background-image: url('./images/bg.avif');">
+    
+    <!-- Scrolling Text Above Header -->
+    <div class="w-full bg-green-600 fixed text-white overflow-hidden z-50">
+      <div class="marquee py-2 text-sm font-semibold">
+        🌍 Welcome to CYNK — Connecting Global Markets to Climate Action & Social Impact 🚀 
+        • High-Integrity Carbon Credits • Climate Tech Innovation • Join Us Today • 
+        🌍 Welcome to CYNK — Connecting Global Markets to Climate Action & Social Impact 🚀 
+        • High-Integrity Carbon Credits • Climate Tech Innovation • Join Us Today • 
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header id="site-header" class="fixed top-[32px] left-0 w-full z-40 bg-transparent text-white transition-colors duration-300">
+      <div class="container mx-auto flex items-center justify-between h-20 px-6">
+        <div class="text-xl font-bold">Logo</div>
+        
+        <nav>
+          <ul class="flex space-x-6 font-medium">
+            <li><a href="#" class="hover:text-green-500 transition text-white">Home</a></li>
+            <li><a href="#" class="hover:text-green-500 transition text-white">Why CYNK</a></li>
+            <li><a href="#" class="hover:text-green-500 transition text-white">Technology</a></li>
+            <li><a href="#" class="hover:text-green-500 transition text-white">Use Cases</a></li>
+            <li><a href="#" class="hover:text-green-500 transition text-white">Our Team</a></li>
+            <li><a href="#" class="hover:text-green-500 transition text-white">News</a></li>
+            <li><a href="#" class="hover:text-green-500 transition text-white">CYNK Calculator</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <a href="#" class="bg-green-500 px-4 py-2 rounded text-sm font-medium hover:bg-green-600">CYNK MarketPlace</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="relative flex items-center justify-center min-h-screen pt-40">
+      <div class="absolute inset-0 flex flex-col md:flex-row">
+        
+        <!-- Text Content -->
+        <div class="flex-1 flex flex-col justify-center items-start px-16 py-12 text-white">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+            Environmental Markets for the Future
+          </h1>
+          <h2 class="text-xl md:text-2xl mb-4">
+            Connecting Global Markets to Climate Action and Social Impact
+          </h2>
+          <p class="mb-6 max-w-xl">
+            CYNK is a next-generation climate tech platform for the creation and financing 
+            of high-quality, high-integrity carbon credits, carbon removals, and natural assets, 
+            delivered through transparency and connectivity.
+          </p>
+          <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
+            Register Today
+          </button>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="flex-1 flex items-center justify-end">
+            <!-- src="https://placehold.co/900x600"  -->
+          <img 
+            src="/images/right.jpg" 
+            alt="Placeholder Sankey diagram illustration showing flow of carbon credits." 
+            class="w-[800px] h-[600px] rounded-l-lg object-cover shadow-md"
+          />
+        </div>
+      </div>
+
+      <!-- Scroll to Bottom Button -->
+      <div class="absolute inset-x-0 bottom-2 flex justify-center">
+        <button 
+          onclick="scrollToBottom()" 
+          class="bg-green-500 px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-600 shadow-md transition"
+        >
+          Scroll to Bottom
+        </button>
+      </div>
+    </main>
+<div class="bg-green-700 min-h-[200vh] text-white p-10">
+  <h1 class="text-4xl font-bold mb-8">Latest News & Highlights</h1>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card 1 -->
+    <div class="bg-green-800 p-6 rounded-2xl shadow-lg hover:bg-green-900 transition">
+      <h2 class="text-xl font-semibold mb-2">UNCCD</h2>
+      <p class="text-sm mb-4">
+        CYNK, KenGrow and UNCCD join new climate-smart agriculture project to empower female farmers.
+      </p>
+      <span class="text-xs italic">Source: UNCCD</span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-green-800 p-6 rounded-2xl shadow-lg hover:bg-green-900 transition">
+      <h2 class="text-xl font-semibold mb-2">Bloomberg</h2>
+      <p class="text-sm mb-4">
+        African Platform Partners With UNESCO on Biodiversity Credits.
+      </p>
+      <span class="text-xs italic">Source: Bloomberg</span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-green-800 p-6 rounded-2xl shadow-lg hover:bg-green-900 transition">
+      <h2 class="text-xl font-semibold mb-2">Bloomberg</h2>
+      <p class="text-sm mb-4">
+        BURN Sells Africa’s First Cook-Stove Carbon Credit Futures.
+      </p>
+      <span class="text-xs italic">Source: Bloomberg</span>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-green-800 p-6 rounded-2xl shadow-lg hover:bg-green-900 transition">
+      <h2 class="text-xl font-semibold mb-2">Bloomberg</h2>
+      <p class="text-sm mb-4">
+        First African Offsets Platform Begins With Record 2 Million Credit Trade.
+      </p>
+      <span class="text-xs italic">Source: Bloomberg</span>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-green-800 p-6 rounded-2xl shadow-lg hover:bg-green-900 transition">
+      <h2 class="text-xl font-semibold mb-2">Financial Times</h2>
+      <p class="text-sm mb-4">
+        Inside the inaugural Africa Climate Summit.
+      </p>
+      <span class="text-xs italic">Source: Financial Times</span>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="mt-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">Connecting Global Markets to Climate Action & Social Impact</h2>
+    <p class="mb-6 max-w-2xl mx-auto">
+      CYNK is a next-generation climate tech platform for the creation and financing of 
+      high-quality carbon credits, removals, and natural assets—delivered with transparency and connectivity.
+    </p>
+    <button class="bg-white text-green-700 font-semibold px-8 py-3 rounded-xl shadow-md hover:bg-gray-200 transition">
+      Register Today
+    </button>
+  </div>
+</div>
+
+
+    <!-- Dummy Footer for Scroll Target -->
+    <footer class="bg-gray-900 text-white py-16 text-center">
+      <p class="text-lg">This is the bottom of the page 🚀</p>
+    </footer>
+  </body>
+</html>
+
